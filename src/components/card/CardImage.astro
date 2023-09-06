@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+
+const { class: className, imageClass, width, height, alt, src } = Astro.props;
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/*.{jpeg,jpg,png,gif}",
+);
+if (src && !images[src])
+  throw new Error(
+    `"${src}" does not exist in glob: "/src/assets/*.{jpeg,jpg,png,gif}"`,
+  );
+---
+
+<div class={`card--image ${className && className}`}>
+  <Image
+    src={images[src]()}
+    width={width}
+    height={height}
+    alt={alt}
+    loading="lazy"
+    format={"webp"}
+    class={`object-cover ${imageClass && imageClass}`}
+  />
+</div>

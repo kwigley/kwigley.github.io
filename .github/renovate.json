@@ -1,0 +1,47 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "group:recommended",
+    "schedule:earlyMondays",
+    ":semanticCommits",
+    ":dependencyDashboard"
+  ],
+  "addLabels": ["dependencies"],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true
+  },
+  "packageRules": [
+    {
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch",
+      "matchPackagePatterns": ["*"],
+      "matchUpdateTypes": ["minor", "patch"]
+    },
+    {
+      "groupName": "dev dependencies",
+      "groupSlug": "dev",
+      "automerge": true,
+      "matchDepTypes": ["devDependencies"]
+    },
+    {
+      "groupName": "definitelyTyped",
+      "groupSlug": "definitely-typed",
+      "automerge": true,
+      "matchPackagePrefixes": ["@types/"]
+    },
+    {
+      "description": "We can manually upgrade node when we are ready",
+      "matchPackageNames": ["node"],
+      "allowedVersions": "<21.1.0"
+    },
+    {
+      "description": "We can manually upgrade the deploy-pages actions",
+      "matchPackageNames": ["actions/deploy-pages"],
+      "allowedVersions": "<1"
+    }
+  ],
+  "vulnerabilityAlerts": {
+    "schedule": ["at any time"]
+  }
+}

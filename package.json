@@ -1,0 +1,50 @@
+{
+  "name": "site",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.4.1",
+    "@astrojs/mdx": "^2.0.6",
+    "@astrojs/preact": "^3.1.0",
+    "@astrojs/prism": "^1.0.2",
+    "@astrojs/rss": "^4.0.3",
+    "@astrojs/sitemap": "^3.0.5",
+    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/ts-plugin": "^1.4.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.10",
+    "astro": "^4.2.3",
+    "astro-icon": "^0.8.2",
+    "clsx": "^1.2.1",
+    "mdast-util-to-string": "^4.0.0",
+    "preact": "^10.19.3",
+    "prettier": "^3.2.4",
+    "prettier-plugin-astro": "^0.12.3",
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "reading-time": "^1.5.0",
+    "remark-toc": "^8.0.1",
+    "sass": "^1.70.0",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3"
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-tailwindcss",
+      "prettier-plugin-astro"
+    ]
+  },
+  "dependencies": {
+    "sharp": "^0.33.2"
+  }
+}

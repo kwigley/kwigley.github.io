@@ -1,0 +1,10 @@
+---
+import SectionContainer from "../SectionContainer.astro";
+const { class: className } = Astro.props;
+---
+
+<SectionContainer>
+  <div class={className}>
+    <slot />
+  </div>
+</SectionContainer>
