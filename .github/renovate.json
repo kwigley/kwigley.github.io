@@ -3,7 +3,8 @@
   "extends": [
     "group:recommended",
     "schedule:earlyMondays",
-    ":semanticCommits"
+    ":semanticCommits",
+    ":dependencyDashboard"
   ],
   "addLabels": ["dependencies"],
   "lockFileMaintenance": {
