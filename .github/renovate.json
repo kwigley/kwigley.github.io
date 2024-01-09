@@ -2,7 +2,6 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "group:recommended",
-    "helpers:pinGitHubActionDigests",
     "schedule:earlyMondays",
     ":semanticCommits"
   ],
@@ -36,13 +35,6 @@
       "allowedVersions": "<21.1.0"
     }
   ],
-  "github-actions": {
-    "automerge": true
-  },
-  "pre-commit": {
-    "automerge": true,
-    "enabled": true
-  },
   "vulnerabilityAlerts": {
     "schedule": ["at any time"]
   }

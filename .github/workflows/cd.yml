@@ -27,9 +27,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout your repository using git
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+        uses: actions/checkout@v4
       - name: Install, build, and upload your site
-        uses: withastro/action@9a7959a16949e620a22e74f81c10cb7ce3b76924 # v1
+        uses: withastro/action@v1
         with:
           node-version: 21
           package-manager: pnpm@latest
@@ -43,4 +43,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@7a9bd943aa5e5175aeb8502edcc6c1c02d398e10 # v4
+        uses: actions/deploy-pages@v1
