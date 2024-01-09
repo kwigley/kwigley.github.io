@@ -1,18 +1,27 @@
-name: cd
+name: CD
+
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
 
 permissions:
   contents: read
   pages: write
   id-token: write
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-
 jobs:
+  ci:
+    permissions:
+      contents: read
+      pull-requests: read
+    uses: ./.github/workflows/ci.yml
+    secrets: inherit
+
   build:
     runs-on: ubuntu-latest
     steps:
