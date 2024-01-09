@@ -23,6 +23,7 @@ jobs:
     secrets: inherit
 
   build:
+    needs: ci
     runs-on: ubuntu-latest
     steps:
       - name: Checkout your repository using git
