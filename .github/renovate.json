@@ -1,17 +1,49 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended", "helpers:pinGitHubActionDigests"],
+  "extends": [
+    "group:recommended",
+    "helpers:pinGitHubActionDigests",
+    "schedule:earlyMondays",
+    ":semanticCommits"
+  ],
   "addLabels": ["dependencies"],
-  "platformAutomerge": true,
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true
   },
-  "pin": {
-    "automerge": true
-  },
-  "separateMinorPatch": false,
+  "packageRules": [
+    {
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch",
+      "matchPackagePatterns": ["*"],
+      "matchUpdateTypes": ["minor", "patch"]
+    },
+    {
+      "groupName": "dev dependencies",
+      "groupSlug": "dev",
+      "automerge": true,
+      "matchDepTypes": ["devDependencies"]
+    },
+    {
+      "groupName": "definitelyTyped",
+      "groupSlug": "definitely-typed",
+      "automerge": true,
+      "matchPackagePrefixes": ["@types/"]
+    },
+    {
+      "description": "We can manually upgrade node when we are ready",
+      "matchPackageNames": ["node"],
+      "allowedVersions": "<21.1.0"
+    }
+  ],
   "github-actions": {
     "automerge": true
+  },
+  "pre-commit": {
+    "automerge": true,
+    "enabled": true
+  },
+  "vulnerabilityAlerts": {
+    "schedule": ["at any time"]
   }
 }
