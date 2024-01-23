@@ -42,7 +42,7 @@ Here are some of the key features of Astro Lane:
 
 Astro Lane also scores a perfect 100/100 in the Lighthouse performance audit, making it one of the fastest themes available for AstroJS.
 
-![Lighthouse Grade](/src/assets/astro-lane-lighthouse-score.png)
+![Lighthouse Grade](../../assets/astro-lane-lighthouse-score.png)
 
 ## Demo
 
