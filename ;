@@ -6,7 +6,7 @@ import projectData from "@/data/projectData.json";
 import CardGroup from "@/components/card/CardGroup.astro";
 import Card from "@/components/card/Card.astro";
 import CardBody from "@/components/card/CardBody.astro";
-// import CardImage from "@/components/card/CardImage.astro";
+import CardImage from "@/components/card/CardImage.astro";
 import CardHeader from "@/components/card/CardHeader.astro";
 import FormattedDate from "../../src/components/FormattedDate.astro";
 import { getCollection } from "astro:content";
@@ -24,7 +24,10 @@ const sortedPosts = posts
   .slice(0, 3);
 ---
 
-<Layout title={SITE.title} description={SITE.desc}>
+<Layout
+  title={SITE.title}
+  description="Astro Lane is a customizable blog theme that offers minimal styling, making it easy for you to tailor it to your needs. It's a personal portfolio landing template for developers and designers."
+>
   <div class="wrap-sm grid gap-16 px-8 md:gap-24 lg:gap-32 mx-auto">
     <SectionContainer class="flex flex-col gap-8 mt-32">
       <Image
@@ -51,8 +54,8 @@ const sortedPosts = posts
             href="https://pingintel.com"
             target="_blank">Ping Data Intelligence</a
           >, building tools for the commercial property insurance space. I'm a
-          generalist and believe that software doesn't need to be complex in
-          order to be powerful.
+          generalist and believe that software doesn't need to be be complex to
+          be powerful.
         </div>
       </div>
     </SectionContainer>
@@ -75,15 +78,17 @@ const sortedPosts = posts
               target="_blank"
             >
               <CardBody>
-                {/* <CardImage */}
-                {/*   src={project.logo} */}
-                {/*   alt={project.shortExcerpt} */}
-                {/*   imageClass="absolute top-0 right-0 m-6 p-4 bg-white rounded-3xl" */}
-                {/*   width={80} */}
-                {/*   height={80} */}
-                {/* /> */}
+                {project.logo && (
+                  <CardImage
+                    src={project.logo}
+                    alt="Alternative text for photo"
+                    imageClass="absolute top-0 right-0 m-6 p-4 bg-white rounded-3xl"
+                    width={80}
+                    height={80}
+                  />
+                )}
                 <div class="card-content absolute bottom-8 left-6 right-6">
-                  <CardHeader>{project.title}</CardHeader>
+                  <CardHeader class="">{project.title}</CardHeader>
                   <div class="content break-words text-3xl font-medium leading-10 tracking-tight lg:tracking-tighter text-neutral-500">
                     <p>{project.shortExcerpt}</p>
                   </div>
