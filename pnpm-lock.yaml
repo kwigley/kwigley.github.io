@@ -4,14 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-dependencies:
-  '@iconify-json/mdi':
-    specifier: ^1.1.64
-    version: 1.1.64
-  '@iconify-json/ph':
-    specifier: ^1.1.10
-    version: 1.1.10
-
 devDependencies:
   '@astrojs/check':
     specifier: ^0.4.1
@@ -37,6 +29,12 @@ devDependencies:
   '@astrojs/ts-plugin':
     specifier: ^1.4.0
     version: 1.4.0
+  '@iconify-json/mdi':
+    specifier: ^1.1.64
+    version: 1.1.64
+  '@iconify-json/ph':
+    specifier: ^1.1.10
+    version: 1.1.10
   '@tailwindcss/aspect-ratio':
     specifier: ^0.4.2
     version: 0.4.2(tailwindcss@3.4.1)
@@ -50,7 +48,7 @@ devDependencies:
     specifier: ^4.2.4
     version: 4.2.4(sass@1.70.0)(typescript@5.3.3)
   astro-icon:
-    specifier: ^1.0.0
+    specifier: ^1.0.2
     version: 1.0.2
   astro-robots-txt:
     specifier: ^1.0.0
@@ -61,6 +59,9 @@ devDependencies:
   husky:
     specifier: ^8.0.3
     version: 8.0.3
+  is-ci:
+    specifier: ^3.0.1
+    version: 3.0.1
   mdast-util-to-string:
     specifier: ^4.0.0
     version: 4.0.0
@@ -787,13 +788,13 @@ packages:
     resolution: {integrity: sha512-zGeo5TjhNFAY6FmSDBLAzDO811t77r6v/mDi7CAL9w5eXqKez6bIjk8R9AL/RHIeq44ALP4Ozr4lMqFTkHr7ug==}
     dependencies:
       '@iconify/types': 2.0.0
-    dev: false
+    dev: true
 
   /@iconify-json/ph@1.1.10:
     resolution: {integrity: sha512-e7owJfx9BgnUVGXKk/243iFV4tHH1UiBDl5mWYkwKoPf4nN2rzPGdD7ISfvwr3SB25VvOteSC5DOVWxjs56Ywg==}
     dependencies:
       '@iconify/types': 2.0.0
-    dev: false
+    dev: true
 
   /@iconify/tools@3.0.7:
     resolution: {integrity: sha512-DxfhFLMnooS34dHelpGUnnYrxLZHs0czC1CgrBhAbuL8ddVzBb2VEQm8kh9qGh7A34qeXAB5iSHH3A72rAaFrg==}
@@ -814,6 +815,7 @@ packages:
 
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
+    dev: true
 
   /@iconify/utils@2.1.16:
     resolution: {integrity: sha512-2q2POA+bg1iKFMT3ZAeS8+Lo2PcbTXH2QKdQ9XwxSyCUg+XHA0ZW7mBoW8v0cU/SgitnM2OheEouPw7mRwY+Bg==}
@@ -1369,7 +1371,7 @@ packages:
   /@types/cheerio@0.22.35:
     resolution: {integrity: sha512-yD57BchKRvTV+JD53UZ6PD8KWY5g5rvvMLRnZR3EQBCZXiDT/HR+pKpMzFGlWNhFrXlo7VPZXtKvIEwZkAWOIA==}
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 20.11.5
     dev: true
 
   /@types/debug@4.1.12:
@@ -1418,6 +1420,12 @@ packages:
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
     dev: true
 
+  /@types/node@20.11.5:
+    resolution: {integrity: sha512-g557vgQjUUfN76MZAN/dt1z3dzcUsimuysco0KeluHgrPdJXkP/XdAURgyO2W9fZWHRtRBiVKzKn8vyOAwlG+w==}
+    dependencies:
+      undici-types: 5.26.5
+    dev: true
+
   /@types/sax@1.2.7:
     resolution: {integrity: sha512-rO73L89PJxeYM3s3pPPjiPgVVcymqU490g0YO5n5By0k2Erzj6tay/4lr1CHAAU4JyOWd1rpQ8bCf6cZfHU96A==}
     dependencies:
@@ -1427,7 +1435,7 @@ packages:
   /@types/tar@6.1.10:
     resolution: {integrity: sha512-60ZO+W0tRKJ3ggdzJKp75xKVlNogKYMqGvr2bMH/+k3T0BagfYTnbmVDFMJB1BFttz6yRgP5MDGP27eh7brrqw==}
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 20.11.5
       minipass: 4.2.8
     dev: true
 
@@ -1447,7 +1455,7 @@ packages:
     resolution: {integrity: sha512-oJoftv0LSuaDZE3Le4DbKX+KS9G36NzOeSap90UIK0yMA/NhKJhqlSGtNDORNRaIbQfzjXDrQa0ytJ6mNRGz/Q==}
     requiresBuild: true
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 20.11.5
     dev: true
     optional: true
 
@@ -2931,6 +2939,13 @@ packages:
   /is-buffer@2.0.5:
     resolution: {integrity: sha512-i2R6zNFDwgEHJyQUtJEk0XFi1i0dPFn/oqjK3/vPCcDeJvW5NQ83V8QbicfF1SupOaB0h8ntgBC2YiE7dfyctQ==}
     engines: {node: '>=4'}
+    dev: true
+
+  /is-ci@3.0.1:
+    resolution: {integrity: sha512-ZYvCgrefwqoQ6yTyYUbQu64HsITZ3NfKX1lzaEYdkTDcfKzzCI/wthRRYKkdjHKFVgNiXKAKm65Zo1pk2as/QQ==}
+    hasBin: true
+    dependencies:
+      ci-info: 3.9.0
     dev: true
 
   /is-core-module@2.13.1:
@@ -5209,6 +5224,10 @@ packages:
     resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
     engines: {node: '>=14.17'}
     hasBin: true
+    dev: true
+
+  /undici-types@5.26.5:
+    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
     dev: true
 
   /unherit@3.0.1:
