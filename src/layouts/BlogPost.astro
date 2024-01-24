@@ -99,19 +99,20 @@ const {
 
 <script>
   // Function to create a Back to history button.
-  const buttons = document.querySelectorAll(".blog-back-button");
-  if (buttons) {
-    buttons.forEach((button) => {
-      button.addEventListener("click", (e) => {
-        handleClick(e);
+  document.addEventListener("astro:page-load", () => {
+    const buttons = document.querySelectorAll(".blog-back-button");
+    if (buttons) {
+      buttons.forEach((button) => {
+        button.addEventListener("click", (e) => {
+          handleClick(e);
+        });
       });
-    });
-  }
+    }
+  });
 
   function handleClick(event: Event) {
     event.preventDefault();
     if (window.history.length > 1) {
-      console.log("back in history");
       window.history.back();
     } else {
       window.location.href = "/blog/";
