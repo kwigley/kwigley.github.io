@@ -12,7 +12,7 @@ export default defineConfig({
   site: SITE.siteUrl,
   markdown: {
     syntaxHighlight: "prism",
-    remarkPlugins: [remarkToc, remarkReadingTime]
+    remarkPlugins: [remarkToc, remarkReadingTime],
   },
-  integrations: [mdx(), sitemap(), tailwind(), robotsTxt()]
+  integrations: [mdx(), sitemap(), tailwind(), robotsTxt()],
 });

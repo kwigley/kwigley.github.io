@@ -3,15 +3,15 @@
   "compilerOptions": {
     "plugins": [
       {
-        "name": "@astrojs/ts-plugin"
-      }
+        "name": "@astrojs/ts-plugin",
+      },
     ],
     "strictNullChecks": true,
     "baseUrl": ".",
     "jsx": "preserve",
     "paths": {
-      "@/*": ["src/*"]
-    }
+      "@/*": ["src/*"],
+    },
   },
-  "exclude": ["node_modules", "**/node_modules/*", ".vscode", "dist"]
+  "exclude": ["node_modules", "**/node_modules/*", ".vscode", "dist"],
 }
