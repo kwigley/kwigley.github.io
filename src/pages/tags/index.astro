@@ -31,11 +31,7 @@ let tags = getSortedTags(posts);
         <span class="ml-2 opacity-70 text-xl"> (All tags used in blogs)</span>
       </h2>
       <ul class="list-none space-y-5">
-        {
-          tags.length == 0 && (
-            <span class="text-neutral-500">... one day</span>
-          )
-        }
+        {tags.length == 0 && <span class="text-neutral-500">... one day</span>}
         {
           tags.map((tag) => (
             <li class={`inline-block my-3 mx-1 underline-offset-8`}>

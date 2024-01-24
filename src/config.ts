@@ -8,8 +8,7 @@ export const SITE: Site = {
   desc: "A personal portfolio landing template for developers and designers.",
   title: "Kyle Wigley",
   ogImage: "/src/assets/me.jpg",
-  keywords:
-    "Personal portfolio, developer portfolio, software engineer",
+  keywords: "Personal portfolio, developer portfolio, software engineer",
   postPerPage: 9,
 };
 
