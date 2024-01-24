@@ -4,6 +4,9 @@ dist/
 # generated types
 .astro/
 
+# vite
+.vite/
+
 # dependencies
 node_modules/
 

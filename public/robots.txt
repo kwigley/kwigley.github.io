@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://kylewigs.com/sitemap-index.xml

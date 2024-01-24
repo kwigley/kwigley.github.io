@@ -5,17 +5,14 @@ import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import remarkToc from "remark-toc";
 import { SITE } from "./src/config.ts";
+import robotsTxt from "astro-robots-txt";
+
 // https://astro.build/config
 export default defineConfig({
   site: SITE.siteUrl,
   markdown: {
     syntaxHighlight: "prism",
-    remarkPlugins: [remarkToc, remarkReadingTime],
+    remarkPlugins: [remarkToc, remarkReadingTime]
   },
-  vite: {
-    optimizeDeps: {
-      exclude: ["@resvg/resvg-js"],
-    },
-  },
-  integrations: [mdx(), sitemap(), tailwind()],
+  integrations: [mdx(), sitemap(), tailwind(), robotsTxt()]
 });

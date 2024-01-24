@@ -28,7 +28,10 @@ const ogUrl = new URL(
   Astro.url.origin,
 ).href;
 
-const { Content } = await post.render();
+const {
+  Content,
+  remarkPluginFrontmatter: { minutesRead },
+} = await post.render();
 ---
 
 <Layout
@@ -45,10 +48,13 @@ const { Content } = await post.render();
           class="mx-auto prose prose-neutral prose-headings:font-medium prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-h4:text-xl prose-h5:text-lg prose-h6:text-base prose-h2:scroll-mt-4 prose-h3:scroll-mt-4 prose-h4:scroll-mt-4 prose-h5:scroll-mt-4 prose-h6:scroll-mt-4 prose-headings:my-8"
         >
           <a
-            class="blog-back-button cursor-pointer text-neutral-500 flex no-underline mb-16"
+            class="group blog-back-button items-center cursor-pointer text-neutral-500 inline-flex no-underline mb-12"
             href="/blog/"
           >
-            <Icon name="ph:arrow-left-light" class="w-6 h-6 mr-4" />
+            <Icon
+              name="ph:arrow-left-light"
+              class="w-6 h-6 mr-4 transition group-hover:-translate-x-1 motion-reduce:transition-none motion-reduce:hover:transform-none"
+            />
             Back
           </a>
           <div>
@@ -60,12 +66,12 @@ const { Content } = await post.render();
             class="mb-4 text-sm w-max md:w-auto items-center rounded-full border border-neutral-300 bg-white px-1 py-[2px] font-medium text-primary-500 block md:inline-flex"
           >
             <span class="px-2">
-              <FormattedDate date={pubDate} />
+              {minutesRead} • <FormattedDate date={pubDate} />
             </span>
           </span>
           {
             updatedDate && (
-              <div class="last-updated-on">
+              <div>
                 Last updated on <FormattedDate date={updatedDate} />
               </div>
             )
@@ -96,14 +102,16 @@ const { Content } = await post.render();
   const buttons = document.querySelectorAll(".blog-back-button");
   if (buttons) {
     buttons.forEach((button) => {
-      button.addEventListener("click", () => {
-        handleClick();
+      button.addEventListener("click", (e) => {
+        handleClick(e);
       });
     });
   }
 
-  function handleClick() {
+  function handleClick(event: Event) {
+    event.preventDefault();
     if (window.history.length > 1) {
+      console.log("back in history");
       window.history.back();
     } else {
       window.location.href = "/blog/";

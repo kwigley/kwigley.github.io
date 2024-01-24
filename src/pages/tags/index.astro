@@ -13,11 +13,11 @@ let tags = getSortedTags(posts);
 
 <Layout title={`Tags - ${SITE.title}`}>
   <div
-    class="main-wrapper wrap-sm grid gap-16 px-8 md:gap-24 lg:gap-32 mx-auto"
+    class="wrap-sm grid gap-16 px-8 md:gap-24 lg:gap-32 mx-auto"
   >
     <SectionContainer class="mt-32">
-      <a href="/" class="font-medium flex no-underline text-neutral-500 mb-8">
-        <Icon name="ph:arrow-left-light" class="w-6 h-6 mr-4" />
+      <a href="/" class="group font-medium flex no-underline text-neutral-500 mb-8">
+        <Icon name="ph:arrow-left-light" class="w-6 h-6 mr-4 transition group-hover:-translate-x-1 motion-reduce:transition-none motion-reduce:hover:transform-none" />
         Back to home
       </a>
       <h2
@@ -32,7 +32,7 @@ let tags = getSortedTags(posts);
             <li class={`inline-block my-3 mx-1 underline-offset-8`}>
               <a
                 href={`/tags/${tag.toLowerCase()}`}
-                class={`text-lg pr-2 flex flex-wrap items-center relative underline hover:-top-0.5 hover:text-skin-accent focus-visible:p-1`}
+                class={`text-lg pr-2 flex flex-wrap items-center relative underline transition hover:-translate-y-0.5 hover:text-skin-accent focus-visible:p-1`}
               >
                 <Icon name="mdi:hashtag" class="w-6 h-6" />
                 &nbsp;<span>{tag.toLowerCase()}</span>

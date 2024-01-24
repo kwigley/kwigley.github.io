@@ -6,6 +6,7 @@ import SectionContainer from "@/components/SectionContainer.astro";
 import SEO from "@/components/seo/SEO.astro";
 import { Icon } from "astro-icon";
 import { SOCIALS } from "@/config";
+import { ViewTransitions } from "astro:transitions";
 
 const {
   class: className,
@@ -27,6 +28,7 @@ const {
       url={url}
       image={image}
     />
+    <ViewTransitions />
   </head>
   <body>
     <main class={className}>
