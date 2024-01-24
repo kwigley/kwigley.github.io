@@ -6,6 +6,7 @@ import tailwind from "@astrojs/tailwind";
 import remarkToc from "remark-toc";
 import { SITE } from "./src/config.ts";
 import robotsTxt from "astro-robots-txt";
+import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,5 +15,5 @@ export default defineConfig({
     syntaxHighlight: "prism",
     remarkPlugins: [remarkToc, remarkReadingTime],
   },
-  integrations: [mdx(), sitemap(), tailwind(), robotsTxt()],
+  integrations: [mdx(), sitemap(), tailwind(), robotsTxt(), icon()],
 });
