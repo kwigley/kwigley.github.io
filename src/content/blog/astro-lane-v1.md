@@ -4,7 +4,7 @@ description: "Are you looking to personalize your blog's look and feel? Look no 
 pubDate: 2023-04-24
 heroImage: "/src/assets/astro-lane.png"
 featured: true
-draft: false
+draft: true
 tags:
   - post
   - docs

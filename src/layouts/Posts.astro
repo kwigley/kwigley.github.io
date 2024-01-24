@@ -66,6 +66,11 @@ const breadcrumbList = currentUrlPath.split("/").slice(1);
 
       <ul class="list-none space-y-5">
         {
+          posts.length == 0 && (
+            <span class="text-neutral-500">... one day</span>
+          )
+        }
+        {
           posts.map((post) => (
             <li class="flex flex-col gap-1">
               <a

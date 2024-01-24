@@ -4,7 +4,7 @@ description: "Astro Lane is an awesome customizable blog theme for Astro, You'll
 pubDate: 2023-04-15
 heroImage: ""
 featured: true
-draft: false
+draft: true
 tags:
   - config
   - docs

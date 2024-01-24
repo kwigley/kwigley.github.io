@@ -4,7 +4,7 @@ description: "First Post - Hello World"
 pubDate: 2023-04-02
 heroImage: "/src/assets/placeholder-hero.jpg"
 featured: true
-draft: false
+draft: true
 tags:
   - post
   - guide
