@@ -97,13 +97,17 @@ const sortedPosts = posts
     <!--  Projects Container -->
     <SectionContainer>
       <div class="flex flex-row my-4 items-center text-neutral-500">
-        <h2 class="font-medium text-h4 mb-0 leading-8 tracking-tighter">
+        <h2 class="font-medium text-h4 mb-0 mr-2 leading-8 tracking-tighter">
           Blogs
         </h2>
-        <a href="/rss.xml"
-          ><Icon name="ph:rss-duotone" class="w-6 h-6 ml-4" /></a
+        <a href="/rss.xml" title="RSS Feed" class="hover:text-neutral-700">
+          <Icon name="ph:rss-duotone" class="w-6 h-6" />
+          <span class="sr-only">RSS Feed</span></a
         >
-        <a href="/blog" class="group font-medium flex no-underline ml-auto">
+        <a
+          href="/blog"
+          class="group font-medium flex no-underline ml-auto hover:text-neutral-700"
+        >
           View all blogs
           <Icon
             name="ph:arrow-right-light"
@@ -155,7 +159,10 @@ const sortedPosts = posts
           Top Tags
         </h2>
 
-        <a href="/tags" class="group font-medium flex no-underline ml-auto">
+        <a
+          href="/tags"
+          class="group font-medium flex no-underline ml-auto hover:text-neutral-700"
+        >
           View all tags
           <Icon
             name="ph:arrow-right-light"

@@ -34,7 +34,7 @@ const breadcrumbList = currentUrlPath.split("/").slice(1);
     <SectionContainer class="mt-32">
       <a
         href="/"
-        class="group font-medium inline-flex no-underline text-neutral-500 mb-8 items-center"
+        class="group font-medium inline-flex no-underline text-neutral-500 mb-8 items-center hover:text-neutral-700"
       >
         <Icon
           name="ph:arrow-left-light"
@@ -59,8 +59,12 @@ const breadcrumbList = currentUrlPath.split("/").slice(1);
           )
         }
 
-        <a href="/rss.xml" class="flex justify-end"
-          ><Icon name="ph:rss-duotone" class="w-6 h-6 text-neutral-500" /></a
+        <a
+          href="/rss.xml"
+          title="RSS Feed"
+          class="flex justify-end text-neutral-500 hover:text-neutral-700"
+          ><Icon name="ph:rss-duotone" class="w-6 h-6" />
+          <span class="sr-only">RSS Feed</span></a
         >
       </div>
 
