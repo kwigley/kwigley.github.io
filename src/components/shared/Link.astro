@@ -15,9 +15,9 @@ const { label, isUnderline, ...props } = Astro.props;
     ["hover:text-neutral-100 cursor-pointer"]: true,
     ["underline decoration-dashed underline-offset-8"]: isUnderline,
   }}
-  {...props}
   rel="noreferrer"
   target="_blank"
+  {...props}
 >
   {label}
   <span class="sr-only">{label} link</span>

@@ -6,7 +6,6 @@ type Social = {
 type Presentation = {
   mail: string;
   title: string;
-  description: string;
   socials: Social[];
   profile?: string;
 };
@@ -14,9 +13,7 @@ type Presentation = {
 const presentation: Presentation = {
   mail: "mail@kylewigs.com",
   title: "Hi, I’m Kyle 👋",
-  profile: "/me.jpg",
-  description:
-    "Bonjour, i'm a *french frontend developer* with over *3 years* of web experience. I am currently working with *NextJS and Typescript*. Outside of work I complete my pokemon card collection and learning TypeScript.",
+  // profile: "/me.jpg",
   socials: [
     {
       label: "X",
