@@ -2,7 +2,7 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <SEO /> component.
 import "@/styles/globals.css";
-import '@fontsource-variable/inter';
+import "@fontsource-variable/inter";
 import SectionContainer from "@/components/SectionContainer.astro";
 import SEO from "@/components/seo/SEO.astro";
 import { Icon } from "astro-icon/components";
@@ -38,7 +38,7 @@ const {
     <!-- End Cloudflare Web Analytics -->
   </head>
 
-  <body>
+  <body class="bg-neutral-50 dark:bg-neutral-950">
     <main class={className}>
       <slot />
     </main>
