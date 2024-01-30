@@ -1,13 +1,19 @@
 # [kylewigs.com](https://kylewigs.com)
 
-Built with Astro and deployed to GitHub Pages.
+## 🥷 Usage
 
-### Getting Started
+- You can modify all the information in the files in the `data` folder (presentation, social links, projects list, colors).
+- You can write articles in `markdown` format in the `content/posts` folder.
 
-Install dependencies: `pnpm install`
+## 🧞 Commands
 
-Run dev server locally: `pnpm dev`
+All commands are run from the root of the project, from a terminal:
 
-Format code: `pnpm format`
-
-Check types: `pnpm check`
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `pnpm install`             | Installs dependencies                            |
+| `pnpm run dev`             | Starts local dev server at `localhost:4321`      |
+| `pnpm run build`           | Build your production site to `./dist/`          |
+| `pnpm run preview`         | Preview your build locally, before deploying     |
+| `pnpm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `pnpm run astro -- --help` | Get help using the Astro CLI                     |
