@@ -6,6 +6,7 @@ type Social = {
 type Presentation = {
   mail: string;
   title: string;
+  desc: string;
   socials: Social[];
   profile?: string;
 };
@@ -13,6 +14,7 @@ type Presentation = {
 const presentation: Presentation = {
   mail: "mail@kylewigs.com",
   title: "Hi, I’m Kyle",
+  desc: "Kyle Wigley's blog about software engineering and portfolio.",
   // profile: "/me.jpg",
   socials: [
     {
