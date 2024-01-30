@@ -12,7 +12,7 @@ type Presentation = {
 
 const presentation: Presentation = {
   mail: "mail@kylewigs.com",
-  title: "Hi, I’m Kyle 👋",
+  title: "Hi, I’m Kyle",
   // profile: "/me.jpg",
   socials: [
     {
