@@ -37,14 +37,13 @@ const posts = (await getCollection("posts")).sort(function (first, second) {
         <h1 class="text-3xl text-neutral-100">
           {presentation.title}
         </h1>
-
         <h2 class="w-auto max-w-[60ch] leading-6">
           I'm a software engineer for <Link
             href="https://pingintel.com"
             label="Ping Data Intelligence"
-          />. I believe that software doesn't need to be complex in order to be powerful.
+          />. I believe that software doesn't need to be complex in order to be
+          powerful.
         </h2>
-
         <SocialLinks />
       </div>
     </article>
@@ -56,7 +55,9 @@ const posts = (await getCollection("posts")).sort(function (first, second) {
       </header>
       {posts.length === 0 && <p>Soon, stay connected 👀...</p>}
 
-      <section class="flex flex-col gap-4 md:flex-row md:flex-wrap">
+      <section
+        class="grid grid-cols-1 md:grid-cols-2 gap-4 md:flex-row md:flex-wrap"
+      >
         {
           posts.length !== 0 &&
             posts

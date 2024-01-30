@@ -6,7 +6,7 @@ type Props = HTMLAttributes<"a"> & {
   isUnderline?: boolean;
 };
 
-const { label, isUnderline, ...props } = Astro.props;
+const { label, isUnderline, target = "_blank", ...props } = Astro.props;
 ---
 
 <a
@@ -16,9 +16,6 @@ const { label, isUnderline, ...props } = Astro.props;
     ["underline decoration-dashed underline-offset-8"]: isUnderline,
   }}
   rel="noreferrer"
-  target="_blank"
-  {...props}
+  target={target}
+  {...props}>{label}<span class="sr-only">{label} link</span></a
 >
-  {label}
-  <span class="sr-only">{label} link</span>
-</a>
