@@ -56,7 +56,7 @@ const posts = (await getCollection("posts")).sort(function (first, second) {
       {posts.length === 0 && <p>Soon, stay connected 👀...</p>}
 
       <section
-        class="grid grid-cols-1 md:grid-cols-2 gap-4 md:flex-row md:flex-wrap"
+        class="grid grid-cols-1 gap-4 md:grid-cols-2 md:flex-row md:flex-wrap"
       >
         {
           posts.length !== 0 &&
