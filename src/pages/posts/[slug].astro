@@ -1,6 +1,7 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
+import Contact from "@/components/Contact.astro";
 import formatDate from "@/utils/formatDate";
 
 export async function getStaticPaths() {
@@ -31,4 +32,5 @@ const { Content } = await post.render();
 
     <Content />
   </main>
+  <Contact />
 </Layout>
