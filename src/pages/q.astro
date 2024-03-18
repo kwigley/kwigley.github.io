@@ -1,0 +1,21 @@
+---
+import Contact from "@/components/Contact.astro";
+import Layout from "@/layouts/Layout.astro";
+import Search from "astro-pagefind/components/Search";
+
+const q = Astro.url.searchParams.get("q") ?? undefined;
+---
+
+<Layout title="Kyle Wigley - Search">
+  <main class="flex flex-col gap-20">
+    <h1 class="text-2xl text-neutral-100">Search</h1>
+
+    <Search
+      id="search"
+      className="pagefind-ui"
+      query={q}
+      uiOptions={{ showImages: false }}
+    />
+  </main>
+  <Contact />
+</Layout>
