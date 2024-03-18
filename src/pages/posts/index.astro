@@ -13,7 +13,6 @@ const posts = (await getCollection("posts")).sort(function (first, second) {
   <main class="flex flex-col gap-20">
     <h1 class="text-2xl text-neutral-100">Posts</h1>
 
-
     <article class="flex flex-col gap-4">
       {
         posts.map((post) => (
