@@ -1,5 +1,4 @@
 module.exports = {
-  sourceType: "module",
   extends: ["plugin:astro/recommended"],
   overrides: [
     {
