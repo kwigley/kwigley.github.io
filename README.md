@@ -9,8 +9,8 @@
 
 All commands are run from the root of the project, from a terminal with `bun` [installed](https://bun.sh/):
 
-| Command                    | Action                                           |
-| :------------------------- | :----------------------------------------------- |
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
 | `bun install`             | Installs dependencies                            |
 | `bun run dev`             | Starts local dev server at `localhost:4321`      |
 | `bun run build`           | Build your production site to `./dist/`          |

@@ -10,8 +10,8 @@
     "check": "astro check",
     "lint": "eslint .",
     "astro": "astro",
-    "prettier": "prettier --write .",
-    "prettier:check": "prettier --check ."
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@astrojs/check": "0.5.9",
