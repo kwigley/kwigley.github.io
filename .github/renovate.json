@@ -1,10 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "group:recommended",
-    "schedule:earlyMondays",
-    ":semanticCommits"
-  ],
+  "extends": ["group:recommended", "schedule:earlyMondays", ":semanticCommits"],
   "dependencyDashboard": false,
   "addLabels": ["dependencies"],
   "lockFileMaintenance": {
