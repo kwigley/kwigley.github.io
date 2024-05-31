@@ -12,8 +12,8 @@ const { label, isUnderline, target = "_blank", ...props } = Astro.props;
 <a
   href={props.href}
   class:list={{
-    ["cursor-pointer hover:text-neutral-100"]: true,
-    ["underline decoration-dashed underline-offset-8"]: isUnderline,
+    ["cursor-pointer text-neutral-300 hover:text-neutral-100"]: true,
+    ["underline decoration-dashed underline-offset-4"]: isUnderline,
   }}
   rel="noreferrer"
   target={target}
