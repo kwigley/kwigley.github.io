@@ -18,6 +18,6 @@ jobs:
         uses: oven-sh/setup-bun@v2
       - name: install deps
         run: bun install
-      - run: bun run format:check
-      - run: bun run check
+      - run: bun run ci
+      - run: bun run typecheck
       - run: bun run build

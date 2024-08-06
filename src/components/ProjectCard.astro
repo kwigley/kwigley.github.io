@@ -6,7 +6,7 @@ type Props = Project;
 const { title, techs, link, isComingSoon } = Astro.props;
 
 const formatTechs = (values: string[]) =>
-  values.toString().replaceAll(",", " • ");
+	values.toString().replaceAll(",", " • ");
 ---
 
 <>

@@ -1,8 +1,8 @@
 ---
-import { SEO } from "astro-seo";
+import { ViewTransitions } from "astro:transitions";
 import { SITE_URL } from "@/data/config";
 import type { HeadTags } from "@/utils/types/HeadTags";
-import { ViewTransitions } from "astro:transitions";
+import { SEO } from "astro-seo";
 
 type Props = HeadTags;
 
@@ -13,12 +13,12 @@ const DEFAULT_DESCRIPTION_PAGE = "Portfolio and thoughts of Kyle Wigley";
 const DEFAULT_URL_SITE = SITE_URL;
 
 const openGraph = {
-  title: title || og?.title || DEFAULT_TITLE_PAGE,
-  type: og?.type || "website",
-  image: og?.image || "/me.jpg",
-  alt: og?.alt || "Kyle Wigley's personal site",
-  url: DEFAULT_URL_SITE,
-  description: og?.description || DEFAULT_DESCRIPTION_PAGE,
+	title: title || og?.title || DEFAULT_TITLE_PAGE,
+	type: og?.type || "website",
+	image: og?.image || "/me.jpg",
+	alt: og?.alt || "Kyle Wigley's personal site",
+	url: DEFAULT_URL_SITE,
+	description: og?.description || DEFAULT_DESCRIPTION_PAGE,
 };
 ---
 

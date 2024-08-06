@@ -1,13 +1,12 @@
 ---
 import { getCollection } from "astro:content";
+import Contact from "@/components/Contact.astro";
 import Layout from "@/layouts/Layout.astro";
 import formatDate from "@/utils/formatDate";
-import Contact from "@/components/Contact.astro";
 
 const posts = (await getCollection("posts", (post) => !post.data.isDraft)).sort(
-  function (first, second) {
-    return second.data.publishedAt.getTime() - first.data.publishedAt.getTime();
-  },
+	(first, second) =>
+		second.data.publishedAt.getTime() - first.data.publishedAt.getTime(),
 );
 ---
 

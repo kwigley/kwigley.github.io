@@ -2,8 +2,8 @@
 import type { HTMLAttributes } from "astro/types";
 
 type Props = HTMLAttributes<"a"> & {
-  label: string;
-  isUnderline?: boolean;
+	label: string;
+	isUnderline?: boolean;
 };
 
 const { label, isUnderline, target = "_blank", ...props } = Astro.props;
