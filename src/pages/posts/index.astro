@@ -4,9 +4,11 @@ import Layout from "@/layouts/Layout.astro";
 import formatDate from "@/utils/formatDate";
 import Contact from "@/components/Contact.astro";
 
-const posts = (await getCollection("posts")).sort(function (first, second) {
-  return second.data.publishedAt.getTime() - first.data.publishedAt.getTime();
-});
+const posts = (await getCollection("posts", (post) => !post.data.isDraft)).sort(
+  function (first, second) {
+    return second.data.publishedAt.getTime() - first.data.publishedAt.getTime();
+  },
+);
 ---
 
 <Layout title="Kyle Wigley - All Posts">
@@ -14,6 +16,7 @@ const posts = (await getCollection("posts")).sort(function (first, second) {
     <h1 class="text-2xl text-neutral-100">Posts</h1>
 
     <article class="flex flex-col gap-4">
+      {posts.length === 0 && <p>Soon, stay connected 👀...</p>}
       {
         posts.map((post) => (
           <a

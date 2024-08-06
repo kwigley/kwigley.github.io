@@ -13,7 +13,7 @@ type Presentation = {
 const presentation: Presentation = {
   mail: "mail@kylewigs.com",
   title: "Welcome, I’m Kyle",
-  desc: "Kyle Wigley's blog about software engineering and portfolio.",
+  desc: "Kyle Wigley's portfolio and blog about software engineering.",
   socials: [
     {
       label: "X",

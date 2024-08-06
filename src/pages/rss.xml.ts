@@ -4,7 +4,7 @@ import { getCollection } from "astro:content";
 import presentation from "@/data/presentation";
 
 export async function GET(context: APIContext) {
-  const posts = await getCollection("posts");
+  const posts = await getCollection("posts", (post) => !post.data.isDraft);
   return rss({
     title: presentation.title,
     description: presentation.desc,
